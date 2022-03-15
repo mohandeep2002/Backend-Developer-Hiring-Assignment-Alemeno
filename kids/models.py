@@ -21,7 +21,8 @@ class Kid(models.Model):
 
 class Images(models.Model):
     image_id = models.ForeignKey(Kid, on_delete=models.CASCADE)
-    image_url = models.URLField()
+    image_url = models.URLField(blank=True, null=True)
+    food_image = models.ImageField(upload_to='images/')
     created_on = models.DateField(auto_now_add=True)
     updated_on = models.DateField(blank=True, null=True)
     is_approved = models.BooleanField(blank=True)
