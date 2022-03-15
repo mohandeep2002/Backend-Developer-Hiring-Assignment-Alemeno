@@ -1,5 +1,6 @@
-{% extends "index.html" %} {% block content %} add imagespage
+{% extends "index.html" %} {% block content %}
 <div class="container">
+  <h1>Food Adding Form<br />{{msg}}</h1>
   <form
     action="{% url 'add_images' %}"
     method="post"

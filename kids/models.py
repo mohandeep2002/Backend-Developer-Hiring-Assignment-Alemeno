@@ -25,7 +25,7 @@ class Images(models.Model):
     food_image = models.ImageField(upload_to='images/')
     created_on = models.DateField(auto_now_add=True)
     updated_on = models.DateField(blank=True, null=True)
-    is_approved = models.BooleanField(blank=True)
+    is_approved = models.BooleanField(blank=True, null=True)
     approved_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True)
     all_groups = (
         ('Veg', 'Veg'),
