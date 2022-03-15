@@ -38,8 +38,7 @@ def add_images(request):
                 print("yes", f.image_id.parents_email_id)
                 destination = str(f.image_id.parents_email_id)
                 subject = "Unknown Category in Food Group"
-                message = "Unknown Category in Food Group \nName:" + str(f.image_id.kid_name) + "\nParents Ph no" + str(
-                    f.image_id.phone_number)
+                message = "Unknown Category in Food Group\nName:" + str(f.image_id.kid_name) + "\nParents Ph no:" + str(f.image_id.phone_number) + "\nKids' Age" + str(f.image_id.kid_age)
                 source = settings.EMAIL_HOST_USER
                 send_mail(subject, message, source, [destination,])
                 print("mail sent")
